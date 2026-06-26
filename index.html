@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>親清日月潭 · 中信企業 ESG 永續環境活動 | OneLife 日月潭</title>
+<style>
+  :root{
+    --navy:#0B2C4D; --teal:#1F7A8C; --teal-d:#13606f; --green:#2E6E4E;
+    --gold:#C8A45C; --ink:#1c2530; --muted:#6b7884;
+    --water-bg:#f1f7f9; --mtn-bg:#f1f6f1; --paper:#ffffff;
+    --line:#e7edf1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    color:var(--ink); line-height:1.75; background:#e9eef2;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:880px;margin:0 auto;background:var(--paper)}
+  section{padding:54px 60px}
+  @media(max-width:640px){section{padding:38px 24px}}
+
+  /* HERO */
+  .hero{
+    position:relative;color:#fff;text-align:center;padding:80px 60px 70px;
+    background:
+      radial-gradient(900px 380px at 70% -10%, rgba(31,122,140,.55), transparent 60%),
+      linear-gradient(160deg,#0B2C4D 0%, #103a5e 55%, #14506b 100%);
+    overflow:hidden;
+  }
+  .brandbar{display:flex;align-items:center;justify-content:center;gap:12px;
+    font-size:13px;letter-spacing:3px;color:#9fc6d2;text-transform:uppercase;margin-bottom:26px}
+  .brandbar b{color:#fff;letter-spacing:2px}
+  .eyebrow{font-size:15px;letter-spacing:8px;color:var(--gold);margin-bottom:20px}
+  .hero h1{font-size:62px;letter-spacing:16px;font-weight:800;line-height:1.1;
+    text-indent:16px;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+  .hero .sub{font-size:23px;letter-spacing:2px;margin-top:14px;color:#cfe6ec;font-weight:600}
+  .hero .pills{margin-top:30px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .pill{border:1px solid rgba(255,255,255,.35);border-radius:999px;
+    padding:7px 18px;font-size:14px;letter-spacing:1px;color:#eaf4f7}
+  .pill.gold{border-color:var(--gold);color:var(--gold)}
+  .hero .meta{margin-top:34px;font-size:14px;color:#a9c2cd;letter-spacing:1px}
+  .hero .client{margin-top:6px;font-size:22px;color:#fff;font-weight:700;letter-spacing:2px}
+  .hero .recv{margin-top:9px;font-size:13px;color:#a9c2cd;letter-spacing:.5px;line-height:1.7}
+
+  h2.sec{font-size:13px;letter-spacing:4px;color:var(--teal);font-weight:800;
+    text-transform:uppercase;margin-bottom:6px}
+  h3.big{font-size:30px;letter-spacing:1px;color:var(--navy);font-weight:800;margin-bottom:18px;line-height:1.3}
+  h3.big .n{color:var(--gold);font-weight:800;margin-right:10px}
+  p.lead{font-size:17px;color:#2b3742;margin-bottom:14px}
+  p{font-size:16px;color:#33414d;margin-bottom:12px}
+  .accent{color:var(--navy);font-weight:800}
+  .t{color:var(--teal);font-weight:800}
+  .g{color:var(--green);font-weight:800}
+  .alt{background:var(--water-bg)}
+
+  .qing{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  @media(max-width:640px){.qing{grid-template-columns:1fr}}
+  .qcard{border:1px solid var(--line);border-radius:16px;padding:26px 24px;background:#fff;
+    position:relative;overflow:hidden}
+  .qcard .zi{font-size:64px;font-weight:800;line-height:1;float:left;margin-right:16px}
+  .qcard.a .zi{color:var(--navy)} .qcard.b .zi{color:var(--teal)}
+  .qcard h4{font-size:19px;margin-bottom:4px}
+  .qcard p{font-size:15px;margin:8px 0 0;color:#3a4854}
+  .slogan{margin-top:24px;text-align:center;font-size:18px;color:var(--navy);font-weight:700;
+    padding:18px;border:1px dashed var(--gold);border-radius:14px;background:#fffdf7}
+
+  .plan{border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-top:8px}
+  .plan .top{padding:20px 26px;color:#fff}
+  .plan.water .top{background:linear-gradient(120deg,var(--teal),var(--teal-d))}
+  .plan.mtn .top{background:linear-gradient(120deg,#3a8a63,var(--green))}
+  .plan .top h3{font-size:23px;letter-spacing:1px;font-weight:800}
+  .plan .top .ln{font-size:14px;opacity:.9;margin-top:4px;letter-spacing:1px}
+  .plan .body{padding:24px 26px;background:#fff}
+  .stations{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.stations{grid-template-columns:1fr}}
+  .st{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#fbfdfe}
+  .st .lab{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:6px;color:#fff;margin-bottom:8px;letter-spacing:1px}
+  .water .st .lab{background:var(--teal)} .mtn .st .lab{background:var(--green)}
+  .st b{display:block;font-size:16px;color:var(--navy);margin-bottom:4px}
+  .st span{font-size:14px;color:#56636e;line-height:1.6}
+  .meta-row{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;font-size:13.5px}
+  .chip{background:#eef4f6;color:#37545d;border-radius:8px;padding:6px 12px}
+  .chip b{color:var(--navy)}
+  .fit{margin-top:16px;font-size:14.5px;color:#46535e}
+  .fit b{color:var(--navy)}
+
+  .flows{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:22px}
+  @media(max-width:640px){.flows{grid-template-columns:1fr}}
+  .flowhd{font-size:16px;font-weight:800;padding:9px 16px;border-radius:9px;color:#fff;margin-bottom:4px;letter-spacing:1px}
+  .flowhd.w{background:linear-gradient(120deg,var(--teal),var(--teal-d))}
+  .flowhd.m{background:linear-gradient(120deg,#3a8a63,var(--green))}
+  .tl{margin-top:14px;border-left:3px solid var(--teal);padding-left:0}
+  .tl.m{border-left-color:var(--green)}
+  .row{display:grid;grid-template-columns:72px 1fr;position:relative;padding:0 0 2px 20px;margin-left:-2px}
+  .row::before{content:"";position:absolute;left:-9px;top:10px;width:13px;height:13px;border-radius:50%;
+    background:#fff;border:3px solid var(--teal)}
+  .tl.m .row::before{border-color:var(--green)}
+  .row .tm{font-weight:800;color:var(--navy);font-size:14px;padding-top:5px}
+  .row .ct{padding:4px 0 13px}
+  .row .ct b{font-size:15px;color:var(--ink)}
+  .row .ct span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+  .row.end::before{border-color:var(--gold);background:var(--gold)}
+
+  table{width:100%;border-collapse:collapse;margin-top:18px;font-size:15px;border-radius:12px;overflow:hidden}
+  th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-weight:700;letter-spacing:1px;font-size:14px}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);color:#3a4854;vertical-align:top}
+  tr:nth-child(even) td{background:#f7fafb}
+  .esg th{background:var(--gold)}
+  td .face{font-weight:800;color:var(--navy)}
+  .amt-cell{color:var(--teal);font-weight:800;white-space:nowrap}
+  table.gt tr.cat td{background:#eaf2f5;color:var(--navy);font-weight:800;font-size:13px;letter-spacing:1px;border-top:2px solid var(--teal)}
+
+  .price{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+  @media(max-width:640px){.price{grid-template-columns:1fr}}
+  .pcard{border-radius:18px;border:1px solid var(--line);overflow:hidden;background:#fff}
+  .pcard.feature{box-shadow:0 14px 40px -18px rgba(31,122,140,.55);border-color:var(--teal)}
+  .pcard .ph{padding:16px 22px;color:#fff;display:flex;align-items:center;justify-content:space-between}
+  .pcard.water .ph{background:linear-gradient(120deg,var(--teal),var(--teal-d))}
+  .pcard.mtn .ph{background:linear-gradient(120deg,#3a8a63,var(--green))}
+  .pcard .ph .badge{font-size:11px;background:var(--gold);color:#3a2c08;font-weight:800;padding:4px 10px;border-radius:999px;letter-spacing:1px}
+  .pcard .pb{padding:20px 22px}
+  .pcard .amt{font-size:34px;font-weight:800;color:var(--navy);letter-spacing:.5px}
+  .pcard .amt small{font-size:14px;color:var(--muted);font-weight:600}
+  .pcard .perunit{font-size:13px;color:var(--muted);margin-top:2px}
+  .pcard ul{list-style:none;margin-top:14px;border-top:1px dashed var(--line);padding-top:12px}
+  .pcard li{font-size:13.5px;color:#46535e;padding:4px 0 4px 20px;position:relative}
+  .pcard li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+  .note{font-size:13px;color:var(--muted);margin-top:14px;font-style:italic}
+  h4.subh{font-size:18px;color:var(--navy);font-weight:800;margin-top:30px}
+  h4.subh .dot{color:var(--gold);margin-right:8px}
+
+  .inc{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:18px}
+  @media(max-width:640px){.inc{grid-template-columns:1fr}}
+  .inc ul{list-style:none}
+  .inc li{font-size:15px;padding:7px 0 7px 28px;position:relative;color:#3a4854;border-bottom:1px solid #eef2f5}
+  .inc li::before{position:absolute;left:0;top:7px;font-weight:800}
+  .inc .yes li::before{content:"✓";color:var(--green)}
+  .inc .no li::before{content:"✕";color:#c0563f}
+  .inc h4{font-size:16px;margin-bottom:6px;color:var(--navy)}
+  .inc .taxnote{font-size:13px;color:var(--muted);margin-top:10px;font-style:italic}
+
+  .terms li{font-size:15px;color:#46535e;margin:8px 0 8px 20px}
+
+  .foot{background:var(--navy);color:#cfe0e8;padding:46px 60px;text-align:center}
+  .foot .logo{font-size:24px;font-weight:800;color:#fff;letter-spacing:2px}
+  .foot .tagline{color:var(--gold);font-size:15px;margin:8px 0 22px;letter-spacing:2px}
+  .foot .grid{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;font-size:14.5px;margin-bottom:18px}
+  .foot .grid div b{display:block;font-size:12px;letter-spacing:1px;color:#7fa6b6;margin-bottom:2px}
+  .foot .guard{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:18px 0;font-size:14px;color:#a9c2cd}
+  .foot .guard span{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:5px 16px}
+  .foot .fine{font-size:12px;color:#6f8c9b;margin-top:18px;letter-spacing:.5px}
+
+  @media print{
+    body{background:#fff}
+    .page{max-width:100%}
+    section{page-break-inside:avoid;padding:30px 34px}
+    .hero{padding:50px 40px}
+    .plan,.pcard,.qcard{box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="brandbar"><b>OneLife</b> 日月潭戶外運動專家 · 綠色旅遊</div>
+    <div class="eyebrow">企 業  E S G 永 續 環 境 活 動</div>
+    <h1>親清日月潭</h1>
+    <div class="sub">親近日月潭 · 清潔日月潭</div>
+    <div class="pills">
+      <span class="pill">水系列 主推</span>
+      <span class="pill">山系列 可選</span>
+      <span class="pill gold">10:00–13:00 · 共 3 小時 · 200 人</span>
+    </div>
+    <div class="meta">提 案 對 象</div>
+    <div class="client">中國信託產險股份有限公司</div>
+    <div class="recv">聯絡窗口：邵小姐（HR Alice）<br>(02) 2370-0789 分機 5807　·　cg050@ctbcins.com</div>
+  </header>
+
+  <!-- 1 理念 -->
+  <section>
+    <h2 class="sec">About · 活動理念</h2>
+    <h3 class="big"><span class="n">01</span>我們為中信 ESG 設計的永續環境活動</h3>
+    <p class="lead">這是我們針對中國信託的 ESG 需求所設計的永續環境活動：讓中信全體同仁在活動當日，親自走進日月潭、親手參與，把永續從報告書帶到現場。</p>
+    <p>我們以實際參與取代單純的捐助或宣導——從<span class="accent">親近環境</span>、<span class="accent">親手清潔</span>，到<span class="accent">源頭減量</span>，落實到每一位參與者的行為，並產出可量化的環境成果。「我們來過，但不曾留下痕跡」是我們帶領全程的精神。</p>
+    <p>我們提供 <span class="t">水系列</span> 與 <span class="g">山系列</span> 兩套方案，活動時長相同、體驗主軸不同，中信可擇一執行，亦可分梯雙系列並行。</p>
+  </section>
+
+  <!-- 2 理念 -->
+  <section class="alt">
+    <h2 class="sec">Concept · 親清日月潭</h2>
+    <h3 class="big"><span class="n">02</span>親清日月潭的理念</h3>
+    <p class="lead">親清日月潭，是親近日月潭、也清潔日月潭。我們帶領參與者從親近這片環境開始，在現場理解垃圾從哪裡來，進一步走向源頭減量——讓清潔不只是一天的活動，而是帶得走的習慣。</p>
+    <div class="qing">
+      <div class="qcard a">
+        <div class="zi">親</div>
+        <h4>親近</h4>
+        <p>親身走進日月潭——SUP 立槳、登山健行，透過生態導覽，建立人與環境的連結。</p>
+      </div>
+      <div class="qcard b">
+        <div class="zi">清</div>
+        <h4>清潔 · 減量</h4>
+        <p>水上淨潭、拾光淨山，並從減塑減量、源頭減量做起，把行動化為可量化的成果。</p>
+      </div>
+    </div>
+    <div class="slogan">從源頭減量，讓清潔成為長期的生活習慣，而不只是一次性的行動。</div>
+  </section>
+
+  <!-- 3 水系列 -->
+  <section>
+    <h2 class="sec">Plan A · 主方案</h2>
+    <h3 class="big"><span class="n">03</span>方案 A｜【水系】親清日月潭</h3>
+    <p class="lead">水系列在月牙灣進行：參與者著裝後由教練帶領，以 SUP 立槳低碳划行親近湖面、進行水上淨潭撿拾漂流垃圾，並依國際淨碳標準完成清除量的計算與分類。</p>
+    <div class="plan water">
+      <div class="top">
+        <h3>SUP 立槳 × 水上淨潭 × 淨碳計算</h3>
+        <div class="ln">集合地點：月牙灣　·　活動時長：共 3 小時</div>
+      </div>
+      <div class="body">
+        <div class="stations">
+          <div class="st"><span class="lab">環節 ①</span><b>著裝 · 教練說明</b><span>穿戴裝備，學習基本划槳技巧與水域安全。</span></div>
+          <div class="st"><span class="lab">環節 ②</span><b>SUP 立槳體驗</b><span>站上 SUP 隨水流漂浮，以低碳方式親近日月潭。</span></div>
+          <div class="st"><span class="lab">環節 ③</span><b>水上淨潭</b><span>撿拾湖面漂流垃圾，維護水域純淨。</span></div>
+          <div class="st"><span class="lab">環節 ④</span><b>淨碳計算 · 成果分類</b><span>依國際淨碳標準，進行清除數量的計算與分類，產出可量化成果。</span></div>
+        </div>
+        <div class="meta-row">
+          <span class="chip"><b>內含：</b>團體保險</span>
+          <span class="chip">SUP 裝備</span>
+          <span class="chip">專業教練指導</span>
+          <span class="chip">活動主持</span>
+          <span class="chip">醫護救護</span>
+        </div>
+        <p class="fit"><b>環節重點：</b>從親近水域、清潔水域到淨碳計算，把減量行動轉為國際標準下的可量化數據。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 山系列 -->
+  <section class="alt">
+    <h2 class="sec">Plan B · 替代 / 並行方案</h2>
+    <h3 class="big"><span class="n">04</span>方案 B｜【山系】親清日月潭</h3>
+    <p class="lead">山系列在金龍山（備案貓囒山）進行：由專業領隊帶領健行與團隊挑戰，沿途以茶文化實境解謎，登頂享品茗茶宴，並於下山途中進行拾光行動撿拾垃圾，實踐無痕山林。</p>
+    <div class="plan mtn">
+      <div class="top">
+        <h3>健行撿廢 × 實境解謎 × 茶文化品茗</h3>
+        <div class="ln">主場地：金龍山（備案貓囒山）　·　活動時長：共 3 小時</div>
+      </div>
+      <div class="body">
+        <div class="stations">
+          <div class="st"><span class="lab">環節 ①</span><b>登山導覽</b><span>專業導覽解說沿途自然生態與人文故事。</span></div>
+          <div class="st"><span class="lab">環節 ②</span><b>實境解謎 · 團隊挑戰</b><span>由專業領隊帶領，將茶文化融入登山，以實境解謎挑戰智慧與團隊合作。</span></div>
+          <div class="st"><span class="lab">環節 ③</span><b>登頂品茗茶宴</b><span>於山頂品味在地茶文化，沉浸高處山水美景。</span></div>
+          <div class="st"><span class="lab">環節 ④</span><b>拾光行動</b><span>下山沿途撿拾垃圾，留下乾淨無痕的足跡。</span></div>
+        </div>
+        <div class="meta-row">
+          <span class="chip"><b>內含：</b>團體保險</span>
+          <span class="chip">實境解謎關卡</span>
+          <span class="chip">登頂品茗茶宴</span>
+          <span class="chip">導覽解說</span>
+          <span class="chip">活動主持</span>
+        </div>
+        <p class="fit"><b>環節重點：</b>結合健行、解謎、茶文化與淨山，體能門檻較低，減廢不減趣。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 流程 -->
+  <section>
+    <h2 class="sec">Schedule · 活動流程</h2>
+    <h3 class="big"><span class="n">05</span>活動流程（10:00–13:00 · 共 3 小時）</h3>
+    <p class="lead">兩系列活動時間相同（10:00–13:00），但操作內容不同，以下分別呈現。實際梯次與分組將於確認人數後規劃。</p>
+    <div class="flows">
+      <div>
+        <div class="flowhd w">水域系列流程</div>
+        <div class="tl">
+          <div class="row"><div class="tm">10:00</div><div class="ct"><b>分組報到</b><span>月牙灣報到、分組、發放物資</span></div></div>
+          <div class="row"><div class="tm">10:20</div><div class="ct"><b>著裝 · 教練說明</b><span>裝備穿戴、划槳技巧與水域安全</span></div></div>
+          <div class="row"><div class="tm">10:40</div><div class="ct"><b>SUP 立槳體驗</b><span>低碳划行，親近湖面</span></div></div>
+          <div class="row"><div class="tm">11:30</div><div class="ct"><b>划槳淨潭</b><span>撿拾湖面漂流垃圾</span></div></div>
+          <div class="row"><div class="tm">12:30</div><div class="ct"><b>成果統計</b><span>淨碳計算與分類、頒證合照</span></div></div>
+          <div class="row end"><div class="tm">13:00</div><div class="ct"><b>活動結束</b><span>引導至餐區（午餐為加購）</span></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="flowhd m">山系列流程</div>
+        <div class="tl m">
+          <div class="row"><div class="tm">10:00</div><div class="ct"><b>分組報到</b><span>金龍山報到、分組、發放物資</span></div></div>
+          <div class="row"><div class="tm">10:20</div><div class="ct"><b>登山導覽</b><span>生態與人文解說，啟程健行</span></div></div>
+          <div class="row"><div class="tm">10:50</div><div class="ct"><b>實境解謎 · 團隊挑戰</b><span>茶文化解謎、專業領隊帶領</span></div></div>
+          <div class="row"><div class="tm">11:40</div><div class="ct"><b>登頂品茗茶宴</b><span>山頂品茗、在地茶文化</span></div></div>
+          <div class="row"><div class="tm">12:10</div><div class="ct"><b>拾光行動</b><span>下山沿途撿拾垃圾、無痕山林</span></div></div>
+          <div class="row"><div class="tm">12:45</div><div class="ct"><b>成果統計</b><span>清除量統計、頒證合照</span></div></div>
+          <div class="row end"><div class="tm">13:00</div><div class="ct"><b>活動結束</b><span>引導至餐區（午餐為加購）</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 ESG -->
+  <section class="alt">
+    <h2 class="sec">Impact · ESG 對應</h2>
+    <h3 class="big"><span class="n">06</span>ESG 對應與執行建議</h3>
+    <p class="lead">我們協助中信把這場活動對應到 ESG 各面向，提供可量化指標與揭露方向，引導貴司如何將成果運用於永續溝通；實際的報告撰寫由貴司主導，我們提供建議與對應做法。</p>
+    <table class="esg">
+      <thead><tr><th style="width:16%">面向</th><th style="width:40%">活動對應</th><th>可量化指標（建議）</th></tr></thead>
+      <tbody>
+        <tr><td><span class="face">E 環境</span></td><td>水上淨潭／拾光淨山、低碳划行、源頭減量</td><td>清除垃圾數量與分類、淨碳計算、低碳出行紀錄</td></tr>
+        <tr><td><span class="face">S 社會</span></td><td>員工凝聚、在地茶文化參與、團隊合作</td><td>參與人數與滿意度、員工關懷紀錄</td></tr>
+        <tr><td><span class="face">G 治理</span></td><td>永續主張落地、可揭露之行動證據</td><td>活動數據、影像紀錄、揭露與執行建議</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:18px;font-size:15px;color:#46535e">我們提供：活動數據統計（清除數量、淨碳計算、參與人次等）、ESG 對應面向說明，以及揭露與執行的建議做法，協助貴司自行完成永續溝通。</p>
+  </section>
+
+  <!-- 7 報價 -->
+  <section>
+    <h2 class="sec">Quotation · 報價</h2>
+    <h3 class="big"><span class="n">07</span>報價結構（每人費用 + 加購項目）</h3>
+    <p class="lead">主活動每人費用<span class="accent">已含 5% 稅金</span>；餐飲、影像、硬體與交通等為依需求加購項目。</p>
+
+    <div class="price">
+      <div class="pcard water feature">
+        <div class="ph"><strong>方案 A · 水系列</strong><span class="badge">主推</span></div>
+        <div class="pb">
+          <div class="amt">NT$ 2,980 <small>/ 人</small></div>
+          <div class="perunit">200 人 · 已含 5% 稅金</div>
+          <ul>
+            <li>團體保險、SUP 裝備、專業教練</li>
+            <li>活動主持人</li>
+            <li>醫護與救護資源</li>
+            <li>場地使用規費、垃圾清運</li>
+            <li>專業企劃與執行管理</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pcard mtn">
+        <div class="ph"><strong>方案 B · 山系列</strong></div>
+        <div class="pb">
+          <div class="amt">NT$ 1,880 <small>/ 人</small></div>
+          <div class="perunit">200 人 · 已含 5% 稅金</div>
+          <ul>
+            <li>團體保險、實境解謎、導覽解說</li>
+            <li>登頂品茗茶宴</li>
+            <li>活動主持人</li>
+            <li>醫護與救護資源</li>
+            <li>場地使用規費、垃圾清運</li>
+            <li>專業企劃與執行管理</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">＊以上每人費用以 200 人規模規劃，已內含 5% 稅金；下列加購項目費用另計。</p>
+
+    <h4 class="subh"><span class="dot">●</span>加購項目（依需求選配，費用另計）</h4>
+    <p style="font-size:14px;color:var(--muted);margin-top:6px">以下費用為粗估參考，實際依需求確認後報價。</p>
+    <table class="gt">
+      <thead><tr><th style="width:24%">項目</th><th>內容說明</th><th style="width:24%">費用（粗估）</th></tr></thead>
+      <tbody>
+        <tr class="cat"><td colspan="3">餐飲</td></tr>
+        <tr><td>桌菜</td><td>每桌 10 人，在地特色菜色</td><td class="amt-cell">NT$ 5,000 / 桌</td></tr>
+        <tr class="cat"><td colspan="3">影像紀錄</td></tr>
+        <tr><td>平面攝影</td><td>活動紀錄照片、精選修圖交付</td><td class="amt-cell">NT$ 35,000</td></tr>
+        <tr><td>動態攝影</td><td>活動錄影與精華影片剪輯</td><td class="amt-cell">NT$ 88,000</td></tr>
+        <tr><td>無人機空拍</td><td>湖面／團體空拍畫面</td><td class="amt-cell">加購平面或動態即贈</td></tr>
+        <tr class="cat"><td colspan="3">硬體與佈置</td></tr>
+        <tr><td>入口意象拱門</td><td>入口意象拱門搭建</td><td class="amt-cell">待確認需求後報價</td></tr>
+        <tr><td>舞台</td><td>開場、頒獎用舞台</td><td class="amt-cell">待確認需求後報價</td></tr>
+        <tr><td>音響</td><td>音響、麥克風設備</td><td class="amt-cell">待確認需求後報價</td></tr>
+        <tr><td>帳篷 / 遮雨棚 · 桌椅</td><td>報到區、休息區佈置（參考項目）</td><td class="amt-cell">待商榷</td></tr>
+        <tr class="cat"><td colspan="3">設計與物資</td></tr>
+        <tr><td>主視覺設計</td><td>含主視覺設計、背板輸出與物資</td><td class="amt-cell">費用另計</td></tr>
+        <tr><td>客製服裝</td><td>企業識別服裝</td><td class="amt-cell">費用另計</td></tr>
+        <tr class="cat"><td colspan="3">交通</td></tr>
+        <tr><td>交通接駁</td><td>台北／台中往返遊覽車</td><td class="amt-cell">待確認需求後報價</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 8 包含 -->
+  <section class="alt">
+    <h2 class="sec">Inclusions · 費用範圍</h2>
+    <h3 class="big"><span class="n">08</span>每人費用包含與不含</h3>
+    <div class="inc">
+      <div>
+        <h4>每人費用已內含（含 5% 稅金）</h4>
+        <ul class="yes">
+          <li>活動主持人</li>
+          <li>醫護與救護資源</li>
+          <li>場地使用規費、垃圾清運</li>
+          <li>專業企劃與執行管理費</li>
+          <li>團體活動保險</li>
+          <li>專業教練（水系）／導覽解說（山系）與帶領</li>
+          <li>活動器材：SUP 裝備（水系）／實境解謎關卡（山系）</li>
+          <li>登頂品茗茶宴（山系）</li>
+        </ul>
+        <p class="taxnote">以上每人費用均已內含 5% 稅金。</p>
+      </div>
+      <div>
+        <h4>不含項目（需另計）</h4>
+        <ul class="no">
+          <li>餐飲費用（桌菜等）</li>
+          <li>影像紀錄：平面攝影、動態攝影、無人機空拍</li>
+          <li>硬體設備：拱門／舞台／音響／帳篷等</li>
+          <li>主視覺設計、客製服裝</li>
+          <li>交通接駁</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 備註 -->
+  <section>
+    <h2 class="sec">Notes · 備註與後續</h2>
+    <h3 class="big"><span class="n">09</span>備註與後續</h3>
+    <ul class="terms">
+      <li>活動約需 3 小時，安排於 10:00–13:00；13:00 後可安排午餐（桌菜）等加購項目。</li>
+      <li>本活動以 200 人規模規劃，將依現場項目進行討論與分組；梯次與動線於確認人數後規劃。</li>
+      <li>水系列受天候與水域狀況影響；山系列主場地為金龍山、備案貓囒山，遇不可抗力啟動備案。</li>
+      <li>本報價單有效期 30 天；各加購項目於需求確認後出具正式報價。</li>
+      <li>建議於活動日前 8 週提出，以保留器材／場地與相關資源。</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="logo">OneLife · 日月潭戶外運動專家有限公司</div>
+    <div class="tagline">運動玩生活 · 凡走過不留痕跡</div>
+    <div class="guard"><span>守護自己</span><span>守護文化</span><span>守護環境</span></div>
+    <div class="grid">
+      <div><b>電話</b>0987-678-494</div>
+      <div><b>Email</b>onelifetaiwan@gmail.com</div>
+      <div><b>LINE</b>@onelife</div>
+      <div><b>統一編號</b>54886596</div>
+    </div>
+    <div class="fine">本提案為估價用途，正式報價以雙方簽訂之合約為準　·　提案日期 2026 年 6 月</div>
+  </footer>
+
+</div>
+</body>
+</html>
